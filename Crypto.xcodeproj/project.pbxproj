@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC5A4D4F2692FC5600AFE44A /* LocalFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5A4D4E2692FC5600AFE44A /* LocalFileManager.swift */; };
 		AC5D992D268EFCB100CF3044 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC5D992C268EFCB100CF3044 /* Assets.xcassets */; };
 		AC8B76FC267210F200EB7427 /* CircleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8B76FB267210F200EB7427 /* CircleButtonView.swift */; };
 		AC8B76FE2672174B00EB7427 /* CircleButtonAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8B76FD2672174B00EB7427 /* CircleButtonAnimationView.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AC5A4D4E2692FC5600AFE44A /* LocalFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFileManager.swift; sourceTree = "<group>"; };
 		AC5D992C268EFCB100CF3044 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC8B76FB267210F200EB7427 /* CircleButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonView.swift; sourceTree = "<group>"; };
 		AC8B76FD2672174B00EB7427 /* CircleButtonAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonAnimationView.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				ACC2575F2673650900C27A26 /* NetworkingManager.swift */,
+				AC5A4D4E2692FC5600AFE44A /* LocalFileManager.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 				AC8B76FE2672174B00EB7427 /* CircleButtonAnimationView.swift in Sources */,
 				AC8B770A26725B3600EB7427 /* HomeViewModel.swift in Sources */,
 				ACF290312672045D002D2E05 /* Color.swift in Sources */,
+				AC5A4D4F2692FC5600AFE44A /* LocalFileManager.swift in Sources */,
 				AC8B770226721C0200EB7427 /* CoinModel.swift in Sources */,
 				AC8B77062672314600EB7427 /* PreviewProvider.swift in Sources */,
 				AC8B770426722F9000EB7427 /* CoinRowView.swift in Sources */,
