@@ -20,6 +20,10 @@ class DeveloperPreview {
     
     let homeVM = HomeViewModel()
     
+    let static1 = StatisticModel(title: "BTC", value: "USA", percentageChange: 45)
+    let static2 = StatisticModel(title: "ADA", value: "Peru")
+    let static3 = StatisticModel(title: "DOGE", value: "Ukraine", percentageChange: -23.5)
+    
     let coin = CoinModel(
         id: "bitcoin",
         symbol: "btc",
