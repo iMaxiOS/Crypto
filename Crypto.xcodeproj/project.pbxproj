@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC5D992D268EFCB100CF3044 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC5D992C268EFCB100CF3044 /* Assets.xcassets */; };
 		AC8B76FC267210F200EB7427 /* CircleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8B76FB267210F200EB7427 /* CircleButtonView.swift */; };
 		AC8B76FE2672174B00EB7427 /* CircleButtonAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8B76FD2672174B00EB7427 /* CircleButtonAnimationView.swift */; };
 		AC8B770226721C0200EB7427 /* CoinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8B770126721C0200EB7427 /* CoinModel.swift */; };
@@ -21,12 +22,12 @@
 		ACC2576726737A1400C27A26 /* CoinImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC2576626737A1400C27A26 /* CoinImageViewModel.swift */; };
 		ACF2901F2671FE8E002D2E05 /* CryptoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF2901E2671FE8E002D2E05 /* CryptoApp.swift */; };
 		ACF290262671FE90002D2E05 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACF290252671FE90002D2E05 /* Preview Assets.xcassets */; };
-		ACF2902E26720309002D2E05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACF2902D26720309002D2E05 /* Assets.xcassets */; };
 		ACF290312672045D002D2E05 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF290302672045D002D2E05 /* Color.swift */; };
 		ACFBC1662672089000CD02CE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFBC1652672089000CD02CE /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AC5D992C268EFCB100CF3044 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC8B76FB267210F200EB7427 /* CircleButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonView.swift; sourceTree = "<group>"; };
 		AC8B76FD2672174B00EB7427 /* CircleButtonAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonAnimationView.swift; sourceTree = "<group>"; };
 		AC8B770126721C0200EB7427 /* CoinModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinModel.swift; sourceTree = "<group>"; };
@@ -43,7 +44,6 @@
 		ACF2901E2671FE8E002D2E05 /* CryptoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoApp.swift; sourceTree = "<group>"; };
 		ACF290252671FE90002D2E05 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		ACF290272671FE90002D2E05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ACF2902D26720309002D2E05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../Resources/Assets.xcassets; sourceTree = "<group>"; };
 		ACF290302672045D002D2E05 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		ACFBC1652672089000CD02CE /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -136,7 +136,7 @@
 				AC8B76FF26721BE700EB7427 /* Models */,
 				ACC2575B267355AC00C27A26 /* Services */,
 				ACF2902F26720447002D2E05 /* Extensions */,
-				ACF2902D26720309002D2E05 /* Assets.xcassets */,
+				AC5D992C268EFCB100CF3044 /* Assets.xcassets */,
 				ACF290272671FE90002D2E05 /* Info.plist */,
 				ACF290242671FE90002D2E05 /* Preview Content */,
 			);
@@ -254,7 +254,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACF290262671FE90002D2E05 /* Preview Assets.xcassets in Resources */,
-				ACF2902E26720309002D2E05 /* Assets.xcassets in Resources */,
+				AC5D992D268EFCB100CF3044 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
