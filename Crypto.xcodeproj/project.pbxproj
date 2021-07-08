@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC1CDCF9269700EB00E700DC /* SaveButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1CDCF8269700EB00E700DC /* SaveButtonView.swift */; };
 		AC2B6E152696DD92008316B8 /* PortfolioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2B6E142696DD92008316B8 /* PortfolioView.swift */; };
 		AC2B6E172696EAB0008316B8 /* XMarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2B6E162696EAB0008316B8 /* XMarkView.swift */; };
 		AC2B6E192696EE1E008316B8 /* CoinLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2B6E182696EE1E008316B8 /* CoinLogoView.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AC1CDCF8269700EB00E700DC /* SaveButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveButtonView.swift; sourceTree = "<group>"; };
 		AC2B6E142696DD92008316B8 /* PortfolioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioView.swift; sourceTree = "<group>"; };
 		AC2B6E162696EAB0008316B8 /* XMarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMarkView.swift; sourceTree = "<group>"; };
 		AC2B6E182696EE1E008316B8 /* CoinLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinLogoView.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 				AC5A4D5826934BD400AFE44A /* StatisticView.swift */,
 				AC5A4D5A269353D200AFE44A /* HomeStatisticView.swift */,
 				AC2B6E162696EAB0008316B8 /* XMarkView.swift */,
+				AC1CDCF8269700EB00E700DC /* SaveButtonView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 				AC8B770826723D3800EB7427 /* Double.swift in Sources */,
 				ACC257602673650900C27A26 /* NetworkingManager.swift in Sources */,
 				AC8B76FC267210F200EB7427 /* CircleButtonView.swift in Sources */,
+				AC1CDCF9269700EB00E700DC /* SaveButtonView.swift in Sources */,
 				AC5A4D5B269353D200AFE44A /* HomeStatisticView.swift in Sources */,
 				ACC25765267376DC00C27A26 /* CoinImageService.swift in Sources */,
 				ACC2575D267356BC00C27A26 /* CoinDataService.swift in Sources */,

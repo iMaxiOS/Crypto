@@ -9,7 +9,9 @@ import SwiftUI
 
 struct PortfolioView: View {
     @EnvironmentObject var vm: HomeViewModel
+    
     @State private var selectedCoin: CoinModel? = nil
+    @State private var quantityText = ""
     
     var body: some View {
         NavigationView {
@@ -18,6 +20,10 @@ struct PortfolioView: View {
                     SearchBarView(search: $vm.searchText)
                     
                     selectedCoinView
+                    
+                    if selectedCoin != nil {
+                        portfolioInputView
+                    }
                 }
             }
             .navigationTitle("Edit Portfolio")
@@ -25,8 +31,23 @@ struct PortfolioView: View {
                 ToolbarItem(placement: .navigationBarLeading) {
                     XMarkView()
                 }
+                
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    SaveButtonView(handle: { saveButtonPressed() })
+                        .opacity(
+                            selectedCoin != nil && selectedCoin?.currentHoldings != Double(quantityText) ? 1 : 0
+                        )
+                }
             })
         }
+    }
+    
+    private func getCurrentValue() -> Double {
+        if let quantity = Double(quantityText) {
+            return quantity * (selectedCoin?.currentPrice ?? 0)
+        }
+        
+        return 0
     }
 }
 
@@ -52,13 +73,62 @@ extension PortfolioView {
                             }
                             .background(
                                 RoundedRectangle(cornerRadius: 15)
-                                    .stroke(selectedCoin?.id == coin.id ? Color.theme.green : Color.clear, lineWidth: 1.0)
+                                    .stroke(
+                                        selectedCoin?.id == coin.id ? Color.theme.green : Color.clear,
+                                        lineWidth: 1.0
+                                    )
                             )
                     }
                 }
             })
-            .padding(.vertical, 4)
+            .frame(height: 120)
             .padding(.horizontal)
         })
+    }
+    
+    private var portfolioInputView: some View {
+        VStack {
+            HStack {
+                Text("Current price of \(selectedCoin?.symbol.uppercased() ?? ""):")
+                Spacer()
+                Text(selectedCoin?.currentPrice.asCurrencyWith6Decimal() ?? "")
+            }
+            
+            Divider()
+            
+            HStack {
+                Text("Amount holding:")
+                Spacer()
+                TextField("Ex: 1.4", text: $quantityText)
+                    .multilineTextAlignment(.trailing)
+                    .keyboardType(.decimalPad)
+            }
+            
+            Divider()
+            
+            HStack {
+                Text("Current value:")
+                Spacer()
+                Text(getCurrentValue().asCurrencyWith6Decimal())
+            }
+        }
+        .animation(.none)
+        .padding()
+        .font(.headline)
+    }
+    
+    private func saveButtonPressed() {
+        guard let coin = selectedCoin else { return }
+        
+        withAnimation(.easeIn) {
+            removeSelectedCoin()
+        }
+        
+        UIApplication.shared.endEditing()
+    }
+    
+    private func removeSelectedCoin() {
+        selectedCoin = nil
+        vm.searchText = ""
     }
 }
