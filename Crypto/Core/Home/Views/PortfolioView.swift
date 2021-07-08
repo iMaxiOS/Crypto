@@ -39,6 +39,11 @@ struct PortfolioView: View {
                         )
                 }
             })
+            .onChange(of: vm.searchText, perform: { value in
+                if value == "" {
+                    removeSelectedCoin()
+                }
+            })
         }
     }
     
@@ -61,14 +66,14 @@ extension PortfolioView {
     private var selectedCoinView: some View {
         ScrollView(.horizontal, showsIndicators: false, content: {
             LazyHStack(spacing: 10, content: {
-                ForEach(vm.allCoins) { coin in
+                ForEach(vm.searchText.isEmpty ? vm.portfolioCoins : vm.allCoins) { coin in
                     VStack {
                         CoinLogoView(coin: coin)
                             .frame(width: 75)
                             .padding(4)
                             .onTapGesture {
                                 withAnimation(.easeInOut) {
-                                    selectedCoin = coin
+                                    updateSelectedCoin(coin: coin)
                                 }
                             }
                             .background(
@@ -84,6 +89,16 @@ extension PortfolioView {
             .frame(height: 120)
             .padding(.horizontal)
         })
+    }
+    
+    private func updateSelectedCoin(coin: CoinModel) {
+        selectedCoin = coin
+        
+        if let portfolioCoin = vm.portfolioCoins.first(where: { $0.id == coin.id }),
+           let amount = portfolioCoin.currentHoldings {
+            quantityText = amount.description
+        }
+        
     }
     
     private var portfolioInputView: some View {
@@ -118,7 +133,9 @@ extension PortfolioView {
     }
     
     private func saveButtonPressed() {
-        guard let coin = selectedCoin else { return }
+        guard let coin = selectedCoin, let amount = Double(quantityText) else { return }
+        
+        vm.updatePortfolio(coin: coin, amount: amount)
         
         withAnimation(.easeIn) {
             removeSelectedCoin()
