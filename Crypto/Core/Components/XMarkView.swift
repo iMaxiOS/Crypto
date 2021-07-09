@@ -23,5 +23,6 @@ struct XMarkView: View {
 struct XMarkView_Previews: PreviewProvider {
     static var previews: some View {
         XMarkView()
+            .previewLayout(.sizeThatFits)
     }
 }
