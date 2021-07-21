@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct StatisticModel {
+struct StatisticModel: Hashable {
     var id = UUID().uuidString
     var title: String
     var value: String
