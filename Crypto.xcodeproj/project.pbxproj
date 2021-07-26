@@ -13,6 +13,7 @@
 		AC2B6E152696DD92008316B8 /* PortfolioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2B6E142696DD92008316B8 /* PortfolioView.swift */; };
 		AC2B6E172696EAB0008316B8 /* XMarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2B6E162696EAB0008316B8 /* XMarkView.swift */; };
 		AC2B6E192696EE1E008316B8 /* CoinLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2B6E182696EE1E008316B8 /* CoinLogoView.swift */; };
+		AC45218826A81C38002F3A07 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC45218726A81C38002F3A07 /* ChartView.swift */; };
 		AC5A4D4F2692FC5600AFE44A /* LocalFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5A4D4E2692FC5600AFE44A /* LocalFileManager.swift */; };
 		AC5A4D512693116B00AFE44A /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5A4D502693116B00AFE44A /* SearchBarView.swift */; };
 		AC5A4D53269324D800AFE44A /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5A4D52269324D800AFE44A /* UIApplication.swift */; };
@@ -36,6 +37,7 @@
 		ACD2376526988BC00080F89E /* CoinDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD2376426988BC00080F89E /* CoinDetailModel.swift */; };
 		ACD23767269895660080F89E /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD23766269895660080F89E /* DetailViewModel.swift */; };
 		ACD23769269895870080F89E /* CoinDetailDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD23768269895870080F89E /* CoinDetailDataService.swift */; };
+		ACD2681B26AF1EDF004C2D2A /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD2681A26AF1EDF004C2D2A /* Date.swift */; };
 		ACE73C772694881C009A364E /* MarketDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE73C762694881C009A364E /* MarketDataModel.swift */; };
 		ACE73C7926949051009A364E /* MarketDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE73C7826949051009A364E /* MarketDataService.swift */; };
 		ACF2901F2671FE8E002D2E05 /* CryptoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF2901E2671FE8E002D2E05 /* CryptoApp.swift */; };
@@ -51,6 +53,7 @@
 		AC2B6E142696DD92008316B8 /* PortfolioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioView.swift; sourceTree = "<group>"; };
 		AC2B6E162696EAB0008316B8 /* XMarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMarkView.swift; sourceTree = "<group>"; };
 		AC2B6E182696EE1E008316B8 /* CoinLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinLogoView.swift; sourceTree = "<group>"; };
+		AC45218726A81C38002F3A07 /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
 		AC5A4D4E2692FC5600AFE44A /* LocalFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFileManager.swift; sourceTree = "<group>"; };
 		AC5A4D502693116B00AFE44A /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		AC5A4D52269324D800AFE44A /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
@@ -74,6 +77,7 @@
 		ACD2376426988BC00080F89E /* CoinDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailModel.swift; sourceTree = "<group>"; };
 		ACD23766269895660080F89E /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		ACD23768269895870080F89E /* CoinDetailDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailDataService.swift; sourceTree = "<group>"; };
+		ACD2681A26AF1EDF004C2D2A /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		ACE73C762694881C009A364E /* MarketDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketDataModel.swift; sourceTree = "<group>"; };
 		ACE73C7826949051009A364E /* MarketDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketDataService.swift; sourceTree = "<group>"; };
 		ACF2901B2671FE8E002D2E05 /* Crypto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Crypto.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -174,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				ACD237622698583E0080F89E /* DetailView.swift */,
+				AC45218726A81C38002F3A07 /* ChartView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -233,6 +238,7 @@
 				AC8B77052672314600EB7427 /* PreviewProvider.swift */,
 				AC8B770726723D3800EB7427 /* Double.swift */,
 				AC5A4D52269324D800AFE44A /* UIApplication.swift */,
+				ACD2681A26AF1EDF004C2D2A /* Date.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -359,6 +365,7 @@
 				AC8B76FE2672174B00EB7427 /* CircleButtonAnimationView.swift in Sources */,
 				ACD237632698583E0080F89E /* DetailView.swift in Sources */,
 				ACD23767269895660080F89E /* DetailViewModel.swift in Sources */,
+				ACD2681B26AF1EDF004C2D2A /* Date.swift in Sources */,
 				AC8B770A26725B3600EB7427 /* HomeViewModel.swift in Sources */,
 				ACF290312672045D002D2E05 /* Color.swift in Sources */,
 				AC5A4D4F2692FC5600AFE44A /* LocalFileManager.swift in Sources */,
@@ -370,6 +377,7 @@
 				AC8B770826723D3800EB7427 /* Double.swift in Sources */,
 				ACC257602673650900C27A26 /* NetworkingManager.swift in Sources */,
 				AC8B76FC267210F200EB7427 /* CircleButtonView.swift in Sources */,
+				AC45218826A81C38002F3A07 /* ChartView.swift in Sources */,
 				AC1CDCF9269700EB00E700DC /* SaveButtonView.swift in Sources */,
 				AC5A4D5B269353D200AFE44A /* HomeStatisticView.swift in Sources */,
 				ACD23769269895870080F89E /* CoinDetailDataService.swift in Sources */,
