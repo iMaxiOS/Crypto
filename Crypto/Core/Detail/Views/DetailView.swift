@@ -24,6 +24,8 @@ struct DetailView: View {
     
     @ObservedObject private var vm: DetailViewModel
     
+    @State private var showFullDescription = false
+    
     private let lazyGrid: [GridItem] = [
         GridItem(.flexible()),
         GridItem(.flexible())
@@ -38,17 +40,14 @@ struct DetailView: View {
             VStack {
                 ChartView(coin: vm.coin)
                     .padding(.vertical)
-                
-                VStack(spacing: 20) {
-                    overviewStatView
-                    Divider()
-                    overviewGridView
-                    additionalDetailView
-                    Divider()
-                    additionalGridView
-                }
-                .padding()
+                descriptionSection
+                overviewGridView
+                additionalDetailView
+                Divider()
+                additionalGridView
+                bottomSectionLinks
             }
+            .padding()
         })
         .navigationTitle(vm.coin.name)
         .toolbar(content: {
@@ -96,6 +95,38 @@ extension DetailView {
             .frame(maxWidth: .infinity, alignment: .leading)
     }
     
+    private var descriptionSection: some View {
+        VStack(spacing: 20) {
+            overviewStatView
+            Divider()
+            
+            ZStack {
+                if let coinDescription = vm.coinDescription, !coinDescription.isEmpty {
+                    VStack(alignment: .leading, spacing: 10) {
+                        Text(coinDescription)
+                            .font(.callout)
+                            .foregroundColor(Color.theme.secondaryText)
+                            .lineLimit(showFullDescription ? nil : 3)
+                        
+                        Button(action: {
+                            withAnimation(.easeInOut) {
+                                showFullDescription.toggle()
+                            }
+                        }, label: {
+                            Text(showFullDescription ? "Less" : "Read more...")
+                                .font(.caption)
+                                .fontWeight(.bold)
+                                .padding(.vertical, 4)
+                        })
+                        .accentColor(.blue)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        
+                    }
+                }
+            }
+        }
+    }
+    
     private var overviewGridView: some View {
         LazyVGrid(columns: lazyGrid, alignment: .leading, spacing: 30, pinnedViews: [], content: {
             ForEach(vm.overviewStatistics, id: \.self) { stat in
@@ -110,5 +141,20 @@ extension DetailView {
                 StatisticView(stat: stat)
             }
         })
+    }
+    
+    private var bottomSectionLinks: some View {
+        VStack(alignment: .leading, spacing: 20) {
+            if let websiteString = vm.websiteURL, let url = URL(string: websiteString) {
+                Link("Website", destination: url)
+            }
+            
+            if let redditString = vm.redditURL, let url = URL(string: redditString) {
+                Link("Reddit", destination: url)
+            }
+        }
+        .accentColor(.blue)
+        .font(.system(size: 16, weight: .bold))
+        .frame(maxWidth: .infinity, alignment: .leading)
     }
 }

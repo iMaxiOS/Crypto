@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC119A3926B05F9500F177BE /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC119A3826B05F9500F177BE /* String.swift */; };
 		AC1CDCF9269700EB00E700DC /* SaveButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1CDCF8269700EB00E700DC /* SaveButtonView.swift */; };
 		AC1CDCFC2697146A00E700DC /* PortfolioCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AC1CDCFA2697146A00E700DC /* PortfolioCoreData.xcdatamodeld */; };
 		AC1CDCFE2697152100E700DC /* PortfolioDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1CDCFD2697152100E700DC /* PortfolioDataService.swift */; };
@@ -47,6 +48,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AC119A3826B05F9500F177BE /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		AC1CDCF8269700EB00E700DC /* SaveButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveButtonView.swift; sourceTree = "<group>"; };
 		AC1CDCFB2697146A00E700DC /* PortfolioCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PortfolioCoreData.xcdatamodel; sourceTree = "<group>"; };
 		AC1CDCFD2697152100E700DC /* PortfolioDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioDataService.swift; sourceTree = "<group>"; };
@@ -239,6 +241,7 @@
 				AC8B770726723D3800EB7427 /* Double.swift */,
 				AC5A4D52269324D800AFE44A /* UIApplication.swift */,
 				ACD2681A26AF1EDF004C2D2A /* Date.swift */,
+				AC119A3826B05F9500F177BE /* String.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -379,6 +382,7 @@
 				AC8B76FC267210F200EB7427 /* CircleButtonView.swift in Sources */,
 				AC45218826A81C38002F3A07 /* ChartView.swift in Sources */,
 				AC1CDCF9269700EB00E700DC /* SaveButtonView.swift in Sources */,
+				AC119A3926B05F9500F177BE /* String.swift in Sources */,
 				AC5A4D5B269353D200AFE44A /* HomeStatisticView.swift in Sources */,
 				ACD23769269895870080F89E /* CoinDetailDataService.swift in Sources */,
 				ACC25765267376DC00C27A26 /* CoinImageService.swift in Sources */,
