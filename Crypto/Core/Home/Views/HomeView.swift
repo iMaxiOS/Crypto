@@ -158,7 +158,9 @@ extension HomeView {
                     .animation(.easeIn)
             }
             .onTapGesture {
-                vm.sortOption = vm.sortOption == .rank ? .rankReversed : .rank
+                withAnimation(.default) {
+                    vm.sortOption = vm.sortOption == .rank ? .rankReversed : .rank
+                }
             }
 
             Spacer()
@@ -172,7 +174,9 @@ extension HomeView {
                         .animation(.easeIn)
                 }
                 .onTapGesture {
-                    vm.sortOption = vm.sortOption == .holdings ? .holdingsReversed : .holdings
+                    withAnimation(.default) {
+                        vm.sortOption = vm.sortOption == .holdings ? .holdingsReversed : .holdings
+                    }
                 }
             }
             
@@ -183,10 +187,21 @@ extension HomeView {
                     .rotationEffect(Angle(degrees: vm.sortOption == .price ? 180 : 0))
                     .animation(.easeIn)
             }
-            .onTapGesture {
-                vm.sortOption = vm.sortOption == .price ? .priceReversed : .price
-            }
             .frame(width: UIScreen.main.bounds.width / 3.5, alignment: .trailing)
+            .onTapGesture {
+                withAnimation(.default) {
+                    vm.sortOption = vm.sortOption == .price ? .priceReversed : .price
+                }
+            }
+            
+            Button(action: {
+                withAnimation(.linear(duration: 2.0)) {
+                    vm.reloadData()
+                }
+            }, label: {
+                Image(systemName: "goforward")
+            })
+            .rotationEffect(Angle(degrees: vm.isLoading ? 360 : 0), anchor: .center)
         }
         .font(.caption)
         .foregroundColor(Color.theme.secondaryText)
