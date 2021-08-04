@@ -47,6 +47,7 @@
 		ACF3A0A026BA725800C69802 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF3A09F26BA725800C69802 /* SettingsView.swift */; };
 		ACF3A0A426BA919600C69802 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACF3A0A326BA919600C69802 /* LaunchScreen.storyboard */; };
 		ACF3A0A726BA943600C69802 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF3A0A626BA943500C69802 /* LaunchView.swift */; };
+		ACF3A0A926BAEBE500C69802 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF3A0A826BAEBE500C69802 /* HapticManager.swift */; };
 		ACFBC1662672089000CD02CE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFBC1652672089000CD02CE /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
@@ -93,6 +94,7 @@
 		ACF3A09F26BA725800C69802 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		ACF3A0A326BA919600C69802 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ACF3A0A626BA943500C69802 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
+		ACF3A0A826BAEBE500C69802 /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
 		ACFBC1652672089000CD02CE /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -159,6 +161,7 @@
 			children = (
 				ACC2575F2673650900C27A26 /* NetworkingManager.swift */,
 				AC5A4D4E2692FC5600AFE44A /* LocalFileManager.swift */,
+				ACF3A0A826BAEBE500C69802 /* HapticManager.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -219,10 +222,10 @@
 			isa = PBXGroup;
 			children = (
 				ACF2901E2671FE8E002D2E05 /* CryptoApp.swift */,
-				ACC2575E2673644400C27A26 /* Utilities */,
 				ACF29032267207C1002D2E05 /* Core */,
 				AC8B76FF26721BE700EB7427 /* Models */,
 				ACC2575B267355AC00C27A26 /* Services */,
+				ACC2575E2673644400C27A26 /* Utilities */,
 				ACF2902F26720447002D2E05 /* Extensions */,
 				AC5D992C268EFCB100CF3044 /* Assets.xcassets */,
 				ACF290272671FE90002D2E05 /* Info.plist */,
@@ -407,6 +410,7 @@
 				ACD2376526988BC00080F89E /* CoinDetailModel.swift in Sources */,
 				ACC257632673745100C27A26 /* CoinImageView.swift in Sources */,
 				ACFBC1662672089000CD02CE /* HomeView.swift in Sources */,
+				ACF3A0A926BAEBE500C69802 /* HapticManager.swift in Sources */,
 				AC2B6E152696DD92008316B8 /* PortfolioView.swift in Sources */,
 				ACF2901F2671FE8E002D2E05 /* CryptoApp.swift in Sources */,
 				AC8B76FE2672174B00EB7427 /* CircleButtonAnimationView.swift in Sources */,

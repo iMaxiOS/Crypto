@@ -37,8 +37,14 @@ struct HomeView: View {
                 }
                 
                 if showPortfolio {
-                    portfolioCoinsListView
-                        .transition(.move(edge: .trailing))
+                    ZStack(alignment: .top) {
+                        if vm.portfolioCoins.isEmpty && vm.searchText.isEmpty {
+                            portfolioEmptyTextView
+                        } else {
+                            portfolioCoinsListView
+                        }
+                    }
+                    .transition(.move(edge: .trailing))
                 }
                 
                 Spacer()
@@ -92,6 +98,7 @@ extension HomeView {
             CircleButtonView(iconName: "chevron.right", handleCompletion: {
                 withAnimation(.spring()) {
                     showPortfolio.toggle()
+                    vm.searchText = ""
                 }
             })
             .rotationEffect(Angle(degrees: showPortfolio ? 180 : 0))
@@ -107,6 +114,7 @@ extension HomeView {
                     .onTapGesture {
                         segue(coin: coin)
                     }
+                    .listRowBackground(Color.theme.background)
             }
         }
         .listStyle(PlainListStyle())
@@ -117,11 +125,24 @@ extension HomeView {
         showDetailView.toggle()
     }
     
+    private var portfolioEmptyTextView: some View {
+        Text("You haven`t added any coins to your portfolio yet. Click the + button to get started!")
+            .font(.callout)
+            .foregroundColor(Color.theme.accent)
+            .fontWeight(.medium)
+            .multilineTextAlignment(.center)
+            .padding(50)
+    }
+    
     private var portfolioCoinsListView: some View {
         List {
             ForEach(vm.portfolioCoins) { coin in
                 CoinRowView(coin: coin, showHoldingColumn: true)
                     .listRowInsets(.init(top: 10, leading: 0, bottom: 10, trailing: 10))
+                    .onTapGesture {
+                        segue(coin: coin)
+                    }
+                    .listRowBackground(Color.theme.background)
             }
         }
         .listStyle(PlainListStyle())

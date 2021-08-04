@@ -17,11 +17,19 @@ struct SettingsView: View {
     
     var body: some View {
         NavigationView {
-            List {
-                swiftThinkingSectionView
-                coingeckoSectionView
-                developerSectionView
-                searchingInformationSectionView
+            ZStack {
+                Color.theme.background.ignoresSafeArea()
+                
+                List {
+                    swiftThinkingSectionView
+                        .listRowBackground(Color.theme.background.opacity(0.5))
+                    coingeckoSectionView
+                        .listRowBackground(Color.theme.background.opacity(0.5))
+                    developerSectionView
+                        .listRowBackground(Color.theme.background.opacity(0.5))
+                    searchingInformationSectionView
+                        .listRowBackground(Color.theme.background.opacity(0.5))
+                }
             }
             .font(.headline)
             .accentColor(.blue)
@@ -32,6 +40,7 @@ struct SettingsView: View {
                     XMarkView()
                 }
             }
+            .background(Color.theme.background.ignoresSafeArea())
         }
     }
 }

@@ -16,6 +16,8 @@ struct CryptoApp: App {
     init() {
         UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor : UIColor(Color.theme.accent)]
         UINavigationBar.appearance().titleTextAttributes = [.foregroundColor : UIColor(Color.theme.accent)]
+        UINavigationBar.appearance().tintColor = UIColor(Color.theme.accent)
+        UITableView.appearance().backgroundColor = UIColor.clear
     }
     
     var body: some Scene {
@@ -26,12 +28,13 @@ struct CryptoApp: App {
                     HomeView()
                         .navigationBarHidden(true)
                 }
+                .navigationViewStyle(StackNavigationViewStyle())
                 .environmentObject(vm)
                 
                 ZStack {
                     if showLaunchView {
                         LaunchView(showLaunchView: $showLaunchView)
-                            .transition(.move(edge: .leading))
+                            .transition(.scale)
                     }
                 }
                 .zIndex(2.0)

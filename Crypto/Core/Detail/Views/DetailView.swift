@@ -50,6 +50,7 @@ struct DetailView: View {
             .padding()
         })
         .navigationTitle(vm.coin.name)
+        .background(Color.theme.background.ignoresSafeArea())
         .toolbar(content: {
             ToolbarItem(placement: .navigationBarTrailing) {
                 navigationBarButton
