@@ -11,6 +11,7 @@ struct HomeView: View {
     @EnvironmentObject private var vm: HomeViewModel
     @State private var showPortfolio = true
     @State private var showPortfolioView = false
+    @State private var showSettingView = false
     
     @State private var selectedCoin: CoinModel? = nil
     @State private var showDetailView = false
@@ -26,11 +27,8 @@ struct HomeView: View {
             
             VStack {
                 headerView
-                
                 HomeStatisticView(showPortfolio: $showPortfolio)
-                
                 SearchBarView(search: $vm.searchText)
-                
                 columnTitles
                 
                 if !showPortfolio {
@@ -45,6 +43,9 @@ struct HomeView: View {
                 
                 Spacer()
             }
+            .sheet(isPresented: $showSettingView, content: {
+                SettingsView()
+            })
         }
         .background(
             NavigationLink(
@@ -71,6 +72,8 @@ extension HomeView {
             CircleButtonView(iconName: showPortfolio ? "plus" : "info", handleCompletion: {
                 if showPortfolio {
                     showPortfolioView.toggle()
+                } else {
+                    showSettingView.toggle()
                 }
             })
             .background(CircleButtonAnimationView(animate: $showPortfolio))
